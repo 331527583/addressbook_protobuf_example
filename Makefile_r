@@ -1,9 +1,0 @@
-OBJS=reader.o addressbook.pb.o
-rmain:$(OBJS)
-	g++ -o rmain $(OBJS) -lprotobuf
-reader.o:reader.cpp addressbook.pb.cc addressbook.pb.h
-	g++ -c reader.cpp addressbook.pb.cc addressbook.pb.h
-addressbook.o:addressbook.pb.h addressbook.pb.cc
-	g++ -c addressbook.pb.h addressbook.pb.cc
-clean:
-	-rm *.o reader

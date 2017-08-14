@@ -1,9 +1,0 @@
-OBJS=writer.o addressbook.pb.o
-wmain:$(OBJS)
-	g++ -o wmain $(OBJS) -lprotobuf
-writer.o:writer.cpp addressbook.pb.cc addressbook.pb.h
-	g++ -c writer.cpp addressbook.pb.cc addressbook.pb.h
-addressbook.o:addressbook.pb.h addressbook.pb.cc
-	g++ -c addressbook.pb.h addressbook.pb.cc
-clean:
-	-rm *.o writer
